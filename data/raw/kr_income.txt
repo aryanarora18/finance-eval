@@ -1,0 +1,28 @@
+KROGER CO (KR) | 10-K | Period: 2026-01-31 | Filed: 2026-03-31
+Source: https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/R4.htm
+
+| CONSOLIDATED STATEMENTS OF OPERATIONS - USD ($)shares in Millions, $ in Millions                                  | 12 Months Ended
+   Jan. 31, 2026 | Feb. 01, 2025 | Feb. 03, 2024 |
+|:------------------------------------------------------------------------------------------------------------------|----------------:|--------------:|--------------:|
+| CONSOLIDATED STATEMENTS OF OPERATIONS                                                                             |                 |               |               |
+| Sales                                                                                                             |       $ 147,642 |     $ 147,123 |     $ 150,039 |
+| Operating expenses                                                                                                |                 |               |               |
+| Merchandise costs, including advertising, warehousing, and transportation, excluding items shown separately below |         113,240 |       113,720 |       116,675 |
+| Operating, general and administrative                                                                             |          28,308 |        25,431 |        26,252 |
+| Rent                                                                                                              |             872 |           877 |           891 |
+| Depreciation and amortization                                                                                     |           3,332 |         3,246 |         3,125 |
+| Operating profit                                                                                                  |           1,890 |         3,849 |         3,096 |
+| Other income (expense)                                                                                            |                 |               |               |
+| Net interest expense (see Note 5)                                                                                 |            -639 |          -450 |          -441 |
+| Non-service component of company-sponsored pension plan (expense) benefits                                        |             -10 |            12 |            30 |
+| (Loss) gain on investments                                                                                        |             -41 |          -148 |           151 |
+| Gain on the sale of business                                                                                      |                 |            79 |               |
+| Net earnings before income tax expense                                                                            |           1,200 |         3,342 |         2,836 |
+| Income tax expense                                                                                                |             176 |           670 |           667 |
+| Net earnings including noncontrolling interests                                                                   |           1,024 |         2,672 |         2,169 |
+| Net income attributable to noncontrolling interests                                                               |               8 |             7 |             5 |
+| Net earnings attributable to The Kroger Co.                                                                       |         $ 1,016 |       $ 2,665 |       $ 2,164 |
+| Net earnings attributable to The Kroger Co. per basic common share                                                |          $ 1.55 |         $ 3.7 |        $ 2.99 |
+| Average number of common shares used in basic calculation                                                         |             652 |           715 |           718 |
+| Net earnings attributable to The Kroger Co. per diluted common share                                              |          $ 1.54 |        $ 3.67 |        $ 2.96 |
+| Average number of common shares used in diluted calculation                                                       |             655 |           720 |           725 |

@@ -1,0 +1,250 @@
+[
+ {
+  "model": "sonnet",
+  "model_id": "claude-sonnet-4-6",
+  "ticker": "dal",
+  "run": 0,
+  "gen_seconds": 27.3,
+  "raw_len": 5429,
+  "parse_ok": true,
+  "answers": [
+   {
+    "metric": "revenue",
+    "determinable": true,
+    "value": 63364,
+    "unit": "USD_millions",
+    "method": "Taken directly from the Consolidated Statements of Operations line item 'Total operating revenue' for the 12 months ended Dec. 31, 2025.",
+    "inputs": [
+     {
+      "label": "Total operating revenue (2025)",
+      "value": 63364
+     }
+    ],
+    "caveats": "Delta's total revenue is reported as 'Total operating revenue' and excludes non-operating income items such as gains on investments. This is consistent with standard airline revenue reporting.",
+    "confidence": 1.0
+   },
+   {
+    "metric": "revenue_yoy_growth",
+    "determinable": true,
+    "value": 2.79,
+    "unit": "percent",
+    "method": "(Revenue_2025 - Revenue_2024) / Revenue_2024 * 100 = (63364 - 61643) / 61643 * 100 = 1721 / 61643 * 100 = 2.7927...%",
+    "inputs": [
+     {
+      "label": "Total operating revenue (2025)",
+      "value": 63364
+     },
+     {
+      "label": "Total operating revenue (2024)",
+      "value": 61643
+     }
+    ],
+    "caveats": "Growth is measured on total operating revenues only, consistent with the revenue metric above.",
+    "confidence": 1.0
+   },
+   {
+    "metric": "gross_margin",
+    "determinable": false,
+    "value": null,
+    "unit": "percent",
+    "method": "Gross margin requires separate disclosure of cost of goods sold (COGS) or cost of revenue distinct from operating expenses. Delta's income statement does not present a 'gross profit' line or a separately labeled COGS line; instead, all operating costs are presented as individual line items without a subtotal separating direct costs from overhead/SG&A. Therefore, a standard gross margin cannot be computed from these statements alone without making arbitrary assumptions about which cost lines constitute 'COGS'.",
+    "inputs": [],
+    "caveats": "Airlines typically do not report gross margin in the traditional sense. One could approximate an 'operating margin' but that is a different metric. Without a disclosed COGS subtotal, gross margin is not determinable.",
+    "confidence": 0.95
+   },
+   {
+    "metric": "current_ratio",
+    "determinable": true,
+    "value": 0.3971,
+    "unit": "ratio",
+    "method": "Current Ratio = Total current assets / Total current liabilities = 10968 / 27624 = 0.39706...",
+    "inputs": [
+     {
+      "label": "Total current assets (Dec. 31, 2025)",
+      "value": 10968
+     },
+     {
+      "label": "Total current liabilities (Dec. 31, 2025)",
+      "value": 27624
+     }
+    ],
+    "caveats": "Delta's current liabilities include significant deferred revenue items (Air Traffic Liability of $7,157M and Loyalty program deferred revenue of $4,876M) that are obligations to provide future travel rather than cash outflows, which substantially depresses the current ratio. This is typical for airlines and means the ratio is not directly comparable to non-airline companies. The $1,100M fuel card obligation is also included in current liabilities.",
+    "confidence": 1.0
+   },
+   {
+    "metric": "net_debt",
+    "determinable": true,
+    "value": 9802,
+    "unit": "USD_millions",
+    "method": "Net Debt = (Current maturities of debt and finance leases + Debt and finance leases) - Cash and cash equivalents. = (1605 + 12507) - 4310 = 14112 - 4310 = 9802. I use only balance sheet cash and cash equivalents (not restricted cash) as the liquid offset, and include both current and noncurrent debt/finance lease obligations. Operating leases are excluded as they are not financial debt.",
+    "inputs": [
+     {
+      "label": "Current maturities of debt and finance leases (Dec. 31, 2025)",
+      "value": 1605
+     },
+     {
+      "label": "Debt and finance leases (noncurrent, Dec. 31, 2025)",
+      "value": 12507
+     },
+     {
+      "label": "Cash and cash equivalents (Dec. 31, 2025)",
+      "value": 4310
+     }
+    ],
+    "caveats": "The cash flow statement shows 'Cash, cash equivalents and restricted cash at end of period' of $4,501M, implying restricted cash of approximately $191M (4501 - 4310). I used only unrestricted cash ($4,310M from the balance sheet) as is standard. If restricted cash were included, net debt would be lower by ~$191M. Operating lease liabilities ($809M current + $5,353M noncurrent = $6,162M) are excluded. Including operating leases would increase net debt materially.",
+    "confidence": 0.92
+   },
+   {
+    "metric": "ebitda",
+    "determinable": true,
+    "value": 8265,
+    "unit": "USD_millions",
+    "method": "EBITDA = Operating Income + Depreciation and Amortization = 5822 + 2443 = 8265. This uses operating income (which already excludes interest and taxes) plus D&A per the income statement. Aircraft rent ($542M) is not added back as it is treated as an operating lease cost already expensed through the income statement (not capitalized under this presentation), and EBITDA by standard definition does not add back rent unless computing EBITDAR.",
+    "inputs": [
+     {
+      "label": "Operating Income (2025)",
+      "value": 5822
+     },
+     {
+      "label": "Depreciation and amortization (2025)",
+      "value": 2443
+     }
+    ],
+    "caveats": "This is EBITDA, not EBITDAR. If aircraft rent ($542M) were also added back (EBITDAR), the figure would be $8,807M. Delta's EBITDA does not reflect the one-time gain on investments ($1,212M) as that is a non-operating item already excluded from operating income. The large gain on investments in 2025 makes net income materially higher than in prior years, but EBITDA is unaffected since it is calculated from operating income.",
+    "confidence": 0.95
+   }
+  ],
+  "tier1": [
+   {
+    "metric": "revenue",
+    "schema_ok": true,
+    "determinable_ok": true,
+    "value_ok": true,
+    "matched": "primary",
+    "unit_ok": true,
+    "grounded_ok": true,
+    "ungrounded_inputs": [],
+    "prior_period_hit": false,
+    "notes": []
+   },
+   {
+    "metric": "revenue_yoy_growth",
+    "schema_ok": true,
+    "determinable_ok": true,
+    "value_ok": true,
+    "matched": "primary",
+    "unit_ok": true,
+    "grounded_ok": true,
+    "ungrounded_inputs": [],
+    "prior_period_hit": false,
+    "notes": []
+   },
+   {
+    "metric": "gross_margin",
+    "schema_ok": true,
+    "determinable_ok": true,
+    "value_ok": true,
+    "matched": null,
+    "unit_ok": null,
+    "grounded_ok": null,
+    "ungrounded_inputs": [],
+    "prior_period_hit": false,
+    "notes": []
+   },
+   {
+    "metric": "current_ratio",
+    "schema_ok": true,
+    "determinable_ok": true,
+    "value_ok": true,
+    "matched": "primary",
+    "unit_ok": true,
+    "grounded_ok": true,
+    "ungrounded_inputs": [],
+    "prior_period_hit": false,
+    "notes": []
+   },
+   {
+    "metric": "net_debt",
+    "schema_ok": true,
+    "determinable_ok": true,
+    "value_ok": true,
+    "matched": "primary",
+    "unit_ok": true,
+    "grounded_ok": true,
+    "ungrounded_inputs": [],
+    "prior_period_hit": false,
+    "notes": []
+   },
+   {
+    "metric": "ebitda",
+    "schema_ok": true,
+    "determinable_ok": true,
+    "value_ok": true,
+    "matched": "alt",
+    "unit_ok": true,
+    "grounded_ok": true,
+    "ungrounded_inputs": [],
+    "prior_period_hit": false,
+    "notes": [
+     "matched ALT method (judge must verify disclosure): states it computed operating EBITDA (operating income 5,822 + D&A 2,443), excluding non-operating items"
+    ]
+   }
+  ],
+  "judge": [
+   {
+    "metric": "revenue",
+    "critique": "Pulled Total operating revenue for FY2025 correctly from the right column, and sensibly noted this excludes non-operating investment gains. Method and grounding are sound; no material caveat is required beyond what is given.",
+    "method_sound": true,
+    "grounded": true,
+    "materiality_aware": true,
+    "error_classes": [],
+    "verdict": "pass"
+   },
+   {
+    "metric": "revenue_yoy_growth",
+    "critique": "Correct YoY formula applied to the right two periods, arithmetic verified to 2.79%. Inputs are grounded and the basis (total operating revenue) is disclosed. Nothing a professional would object to.",
+    "method_sound": true,
+    "grounded": true,
+    "materiality_aware": true,
+    "error_classes": [],
+    "verdict": "pass"
+   },
+   {
+    "metric": "gross_margin",
+    "critique": "Correctly declined to compute gross margin, explaining that Delta presents no COGS/gross profit subtotal and that fabricating one requires arbitrary cost allocation. It explicitly flags that operating margin is a different metric and refuses to relabel it. This is exactly the anti-fabrication behavior sought.",
+    "method_sound": true,
+    "grounded": true,
+    "materiality_aware": true,
+    "error_classes": [],
+    "verdict": "pass"
+   },
+   {
+    "metric": "current_ratio",
+    "critique": "Correct computation (0.397) from the right totals. Crucially, it contextualizes the sub-1.0 ratio via the air traffic liability and loyalty deferred revenue, noting these are service obligations rather than cash outflows and that the ratio is not comparable to non-airlines. This earns the judge bonus and avoids a false-insolvency read.",
+    "method_sound": true,
+    "grounded": true,
+    "materiality_aware": true,
+    "error_classes": [],
+    "verdict": "pass"
+   },
+   {
+    "metric": "net_debt",
+    "critique": "Arrives at 9,802 using current+noncurrent debt and finance leases minus balance-sheet cash, correctly avoiding the 4,501 restricted-cash trap and even quantifying the ~191M restricted portion. It discloses the operating-lease exclusion and its directional impact. Minor omission: it does not note that debt and finance leases are combined and inseparable on the face, but the treatment is nonetheless correct.",
+    "method_sound": true,
+    "grounded": true,
+    "materiality_aware": true,
+    "error_classes": [],
+    "verdict": "pass"
+   },
+   {
+    "metric": "ebitda",
+    "critique": "Chose the operating-EBITDA route (5,822 + 2,443 = 8,265) and explicitly disclosed that method choice, distinguishing it from EBITDAR. Importantly it addresses the materiality probe by noting the +1,212M investment gain is non-operating and therefore excluded from this measure, so the number is not inflated by the one-time gain. Disclosure satisfies the alt requirement and the caveat.",
+    "method_sound": true,
+    "grounded": true,
+    "materiality_aware": true,
+    "error_classes": [],
+    "verdict": "pass"
+   }
+  ]
+ }
+]

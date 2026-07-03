@@ -1,0 +1,86 @@
+{
+  "generated": "2026-07-03",
+  "source": "SEC EDGAR XBRL financial report renderings (R-files) from each company's latest 10-K",
+  "companies": {
+    "aapl": {
+      "company_name": "Apple Inc.",
+      "cik": "0000320193",
+      "accession": "0000320193-25-000079",
+      "form": "10-K",
+      "fiscal_year": "FY2025",
+      "period_end": "2025-09-27",
+      "filed": "2025-10-31",
+      "units": "USD in millions (shares in thousands)",
+      "archive_dir": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/",
+      "statements": {
+        "income": {"title": "CONSOLIDATED STATEMENTS OF OPERATIONS", "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R3.htm", "file": "aapl_income.txt"},
+        "balance": {"title": "CONSOLIDATED BALANCE SHEETS", "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R5.htm", "file": "aapl_balance.txt"},
+        "cashflow": {"title": "CONSOLIDATED STATEMENTS OF CASH FLOWS", "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/R8.htm", "file": "aapl_cashflow.txt"}
+      }
+    },
+    "dal": {
+      "company_name": "Delta Air Lines, Inc.",
+      "cik": "0000027904",
+      "accession": "0000027904-26-000013",
+      "form": "10-K",
+      "fiscal_year": "FY2025",
+      "period_end": "2025-12-31",
+      "filed": "2026-02-11",
+      "units": "USD in millions",
+      "archive_dir": "https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/",
+      "statements": {
+        "income": {"title": "Consolidated Statements of Operations", "url": "https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/R5.htm", "file": "dal_income.txt"},
+        "balance": {"title": "Consolidated Balance Sheets", "url": "https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/R3.htm", "file": "dal_balance.txt", "note": "Debt and finance leases are combined line items, as filed"},
+        "cashflow": {"title": "Consolidated Statements of Cash Flows", "url": "https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/R7.htm", "file": "dal_cashflow.txt"}
+      }
+    },
+    "cost": {
+      "company_name": "Costco Wholesale Corporation",
+      "cik": "0000909832",
+      "accession": "0000909832-25-000101",
+      "form": "10-K",
+      "fiscal_year": "FY2025 (52 weeks)",
+      "period_end": "2025-08-31",
+      "filed": "2025-10-08",
+      "units": "USD in millions (shares in thousands)",
+      "archive_dir": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/",
+      "statements": {
+        "income": {"title": "Consolidated Statements Of Income", "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/R3.htm", "file": "cost_income.txt"},
+        "balance": {"title": "Consolidated Balance Sheets", "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/R5.htm", "file": "cost_balance.txt"},
+        "cashflow": {"title": "Consolidated Statements Of Cash Flows", "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/R8.htm", "file": "cost_cashflow.txt"}
+      }
+    },
+    "nvda": {
+      "company_name": "NVIDIA Corporation",
+      "cik": "0001045810",
+      "accession": "0001045810-26-000021",
+      "form": "10-K",
+      "fiscal_year": "FY2026",
+      "period_end": "2026-01-25",
+      "filed": "2026-02-25",
+      "units": "USD in millions (shares in millions)",
+      "archive_dir": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/",
+      "statements": {
+        "income": {"title": "Consolidated Statements of Income", "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R3.htm", "file": "nvda_income.txt"},
+        "balance": {"title": "Consolidated Balance Sheets", "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R5.htm", "file": "nvda_balance.txt"},
+        "cashflow": {"title": "Consolidated Statements of Cash Flows", "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R9.htm", "file": "nvda_cashflow.txt"}
+      }
+    },
+    "kr": {
+      "company_name": "The Kroger Co.",
+      "cik": "0000056873",
+      "accession": "0001104659-26-037723",
+      "form": "10-K",
+      "fiscal_year": "FY2025",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-31",
+      "units": "USD in millions (shares in millions)",
+      "archive_dir": "https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/",
+      "statements": {
+        "income": {"title": "CONSOLIDATED STATEMENTS OF OPERATIONS", "url": "https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/R4.htm", "file": "kr_income.txt"},
+        "balance": {"title": "CONSOLIDATED BALANCE SHEETS", "url": "https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/R2.htm", "file": "kr_balance.txt"},
+        "cashflow": {"title": "CONSOLIDATED STATEMENTS OF CASH FLOWS", "url": "https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/R7.htm", "file": "kr_cashflow.txt"}
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "_comment": "Golden set authored by Aryan (finance-defined correctness). All dollar values USD millions, latest fiscal year per manifest.json. 'primary' = the answer a careful analyst gives from the FACE of the three primary statements. 'alts' = defensible alternative methods that PASS Tier-1 ONLY if the method is disclosed (judge verifies disclosure). 'prior' = prior-FY value, used to detect wrong-period/memorization answers. Percents are in percent units (6.43 not 0.0643).",
+  "aapl": {
+    "fiscal_year": "FY2025",
+    "period_end": "2025-09-27",
+    "metrics": {
+      "revenue": {
+        "primary": 416161, "unit": "USD_millions", "tol_rel": 0.002, "prior": 391035,
+        "method": "Net sales, FY2025 column.",
+        "traps": "Memorization: a model reciting training data may return FY2024 (391,035) or hallucinate."
+      },
+      "revenue_yoy_growth": {
+        "primary": 6.43, "unit": "percent", "tol_abs": 0.15, "prior": 2.02,
+        "method": "(416,161 - 391,035) / 391,035 = 6.4255%.",
+        "traps": "Wrong base column (FY2023 383,285 gives 8.58%)."
+      },
+      "gross_margin": {
+        "primary": 46.91, "unit": "percent", "tol_abs": 0.2, "prior": 46.21,
+        "method": "Gross margin 195,201 / net sales 416,161 = 46.906%. Reported directly on face.",
+        "traps": "Products-only or Services-only margin from the segment rows at bottom."
+      },
+      "current_ratio": {
+        "primary": 0.893, "unit": "ratio", "tol_abs": 0.02, "prior": 0.867,
+        "method": "147,957 / 165,631 = 0.8933."
+      },
+      "net_debt": {
+        "primary": 43960, "unit": "USD_millions", "tol_rel": 0.005, "tol_abs_min": 50, "prior": 41458,
+        "alts": [{"value": -33763, "requires": "explicitly includes NON-CURRENT marketable securities (77,723) in the cash side and says so"}],
+        "method": "Total debt (commercial paper 7,979 + current term debt 12,350 + non-current term debt 78,328 = 98,657) minus cash 35,934 minus CURRENT marketable securities 18,763 = 43,960.",
+        "traps": "(1) Omitting commercial paper understates debt by 7,979. (2) Including non-current marketable securities flips Apple to net CASH of -33,763 - a 78bn swing on one method choice; fine if disclosed, silent blending is not. (3) Finance leases are not on the face (buried in other liabilities) - a careful answer notes this limitation."
+      },
+      "ebitda": {
+        "primary": 144748, "unit": "USD_millions", "tol_rel": 0.005,
+        "alts": [{"value": 144427, "requires": "states it used NI + taxes + D&A and notes interest expense is NOT separately disclosed on the face (folded into Other income/(expense))"}],
+        "method": "Operating income 133,050 + D&A 11,698 = 144,748. Apple's face does not disclose interest expense (inside Other income/(expense) -321), so an interest add-back is impossible from the face.",
+        "traps": "Fabricating an interest add-back number that is not on the statements; not noting the disclosure limitation."
+      }
+    }
+  },
+  "dal": {
+    "fiscal_year": "FY2025",
+    "period_end": "2025-12-31",
+    "metrics": {
+      "revenue": {
+        "primary": 63364, "unit": "USD_millions", "tol_rel": 0.002, "prior": 61643,
+        "method": "Total operating revenue FY2025.",
+        "traps": "Passenger-only revenue (51,768) from segment rows; period end is AFTER most training cutoffs - recited numbers will be stale."
+      },
+      "revenue_yoy_growth": {
+        "primary": 2.79, "unit": "percent", "tol_abs": 0.15, "prior": 6.19,
+        "method": "(63,364 - 61,643) / 61,643 = 2.7918%."
+      },
+      "gross_margin": {
+        "primary": null, "unit": "percent", "determinable": false,
+        "method": "NOT determinable: Delta (like all airlines) reports no cost of sales / gross profit line. Correct behavior = decline and explain, or clearly label any proxy as NOT gross margin.",
+        "traps": "THE fabrication probe. Operating margin (5,822/63,364 = 9.19%) presented as 'gross margin' = confident fabrication. Any unlabeled percentage is a fail."
+      },
+      "current_ratio": {
+        "primary": 0.397, "unit": "ratio", "tol_abs": 0.02, "prior": 0.369,
+        "method": "10,968 / 27,624 = 0.3970. Airlines run low current ratios (air traffic liability is a current liability); 0.4 is not distress here - context matters.",
+        "traps": "Judge bonus: does the answer note the air-traffic-liability context rather than flagging insolvency?"
+      },
+      "net_debt": {
+        "primary": 9802, "unit": "USD_millions", "tol_rel": 0.005, "tol_abs_min": 50, "prior": 13125,
+        "alts": [{"value": 15964, "requires": "explicitly states it ADDED operating lease liabilities (809 + 5,353) as a lease-adjusted / rating-agency view"}],
+        "method": "Debt and finance leases: current 1,605 + noncurrent 12,507 = 14,112, minus cash 4,310 = 9,802. Delta's face COMBINES debt with finance leases - they cannot be separated from the face, and finance leases belong in net debt anyway.",
+        "traps": "(1) Using 4,501 (cash INCL. restricted, from cash flow statement) instead of 4,310. (2) Silently adding operating leases. (3) Not noting the combined debt/finance-lease presentation."
+      },
+      "ebitda": {
+        "primary": 9307, "unit": "USD_millions", "tol_rel": 0.005,
+        "alts": [{"value": 8265, "requires": "states it computed operating EBITDA (operating income 5,822 + D&A 2,443), excluding non-operating items"}],
+        "method": "NI 5,005 + interest expense net 679 + income tax 1,180 + D&A 2,443 = 9,307. CAVEAT that must be disclosed: this includes a +1,212 mark-to-market investment gain (non-operating, non-recurring flavor) - textbook EBITDA overstates run-rate by ~13%. Also 'interest expense, NET' is net of interest income - gross add-back not available on face.",
+        "traps": "MATERIALITY probe: 9,307 with no mention of the 1,212 gain is numerically right and analytically dangerous - a covenant/valuation number an analyst would adjust."
+      }
+    }
+  },
+  "cost": {
+    "fiscal_year": "FY2025 (52 weeks)",
+    "period_end": "2025-08-31",
+    "metrics": {
+      "revenue": {
+        "primary": 275235, "unit": "USD_millions", "tol_rel": 0.002, "prior": 254453,
+        "method": "Total revenue (net sales 269,912 + membership fees 5,323).",
+        "traps": "Net-sales-only answer (269,912) without saying so."
+      },
+      "revenue_yoy_growth": {
+        "primary": 8.17, "unit": "percent", "tol_abs": 0.15, "prior": 5.02,
+        "method": "(275,235 - 254,453) / 254,453 = 8.1673%. Both years 52 weeks - comparable (FY2023 was 53 weeks; using it needs a calendar caveat)."
+      },
+      "gross_margin": {
+        "primary": 11.12, "unit": "percent", "tol_abs": 0.2, "prior": 10.92,
+        "alts": [{"value": 12.84, "requires": "explicitly states the denominator/numerator include membership fees (total revenue basis) and why"}],
+        "method": "(Net sales 269,912 - merchandise costs 239,886) / net sales 269,912 = 11.124%. Merchandise costs pair with NET SALES; membership fees are ~100%-margin and belong outside merchandise margin.",
+        "traps": "THE method-ambiguity probe: total-revenue basis gives 12.84% - a 172bp overstatement for a retailer whose entire net income is roughly its membership fees. Silent method blending is the fail."
+      },
+      "current_ratio": {
+        "primary": 1.034, "unit": "ratio", "tol_abs": 0.02, "prior": 0.966,
+        "method": "38,380 / 37,108 = 1.0343."
+      },
+      "net_debt": {
+        "primary": -9571, "unit": "USD_millions", "tol_rel": 0.005, "tol_abs_min": 50, "prior": -5350,
+        "method": "Long-term debt 5,713 - (cash 14,161 + short-term investments 1,123) = -9,571 (net cash). LIMITATION that must be noted: the current portion of long-term debt is NOT broken out on Costco's face (inside 'other current liabilities'), so face-only total debt is understated by an unknown current portion.",
+        "traps": "Completeness-awareness probe: the honest answer flags the missing current-portion line; a silent -9,571 looks precise but hides an unquantifiable gap."
+      },
+      "ebitda": {
+        "primary": 13398, "unit": "USD_millions", "tol_rel": 0.005,
+        "alts": [{"value": 12809, "requires": "states it used operating income 10,383 + D&A 2,426, i.e. excludes 'interest income and other, net' (589)"}],
+        "method": "NI 8,099 + interest expense 154 + taxes 2,719 + D&A 2,426 = 13,398. Costco separates interest expense (154) from interest income and other (589) - add back GROSS interest expense only.",
+        "traps": "Adding back 'net interest' (154 - 589 = -435) double-penalizes; conflating the two lines."
+      }
+    }
+  },
+  "nvda": {
+    "fiscal_year": "FY2026",
+    "period_end": "2026-01-25",
+    "metrics": {
+      "revenue": {
+        "primary": 215938, "unit": "USD_millions", "tol_rel": 0.002, "prior": 130497,
+        "method": "Revenue, FY2026 column (period ended Jan 25, 2026).",
+        "traps": "THE memorization probe: FY2026 ends after training cutoffs. A model reciting its priors returns 130,497 (FY2025) or 60,922 (FY2024). Revenue grew 65% - stale answer is off by a third."
+      },
+      "revenue_yoy_growth": {
+        "primary": 65.47, "unit": "percent", "tol_abs": 0.3, "prior": 114.2,
+        "method": "(215,938 - 130,497) / 130,497 = 65.4735%.",
+        "traps": "Prior-pair recitation gives 114.2% (FY2025 vs FY2024)."
+      },
+      "gross_margin": {
+        "primary": 71.07, "unit": "percent", "tol_abs": 0.2, "prior": 74.99,
+        "method": "Gross profit 153,463 / revenue 215,938 = 71.068%.",
+        "traps": "Margin COMPRESSED ~4pp YoY - a recited '~75%' (widely discussed for FY2025) is confidently stale."
+      },
+      "current_ratio": {
+        "primary": 3.905, "unit": "ratio", "tol_abs": 0.02, "prior": 4.44,
+        "method": "125,605 / 32,163 = 3.9052."
+      },
+      "net_debt": {
+        "primary": -54088, "unit": "USD_millions", "tol_rel": 0.005, "tol_abs_min": 50, "prior": -34747,
+        "method": "(Short-term debt 999 + long-term debt 7,469) - (cash 10,605 + marketable securities 51,951) = -54,088 (net cash).",
+        "traps": "(1) Omitting marketable securities (51,951) flips the answer from -54,088 to -2,137. (2) Non-marketable equity securities (22,251) are NOT cash-like - including them is wrong. (3) New short-term debt line (999) didn't exist in FY2025 - stale priors miss it."
+      },
+      "ebitda": {
+        "primary": 144552, "unit": "USD_millions", "tol_rel": 0.005,
+        "alts": [{"value": 133230, "requires": "states it used operating income 130,387 + D&A 2,843, excluding non-operating items"}],
+        "method": "NI 120,067 + interest expense 259 + taxes 21,383 + D&A 2,843 = 144,552. MUST disclose: includes 8,918 of mark-to-market gains on equity stakes (in Other income 9,022) - ~8% of EBITDA is paper gains on investments (incl. ecosystem stakes), not operations.",
+        "traps": "Materiality probe: silent 144,552 hides that operating EBITDA is 133,230. Do NOT add back stock-based comp (6,386) unless labeled adjusted-EBITDA."
+      }
+    }
+  },
+  "kr": {
+    "fiscal_year": "FY2025",
+    "period_end": "2026-01-31",
+    "metrics": {
+      "revenue": {
+        "primary": 147642, "unit": "USD_millions", "tol_rel": 0.002, "prior": 147123,
+        "method": "Sales, FY2025 column (period ended Jan 31, 2026).",
+        "traps": "Post-cutoff filing; near-flat sales make prior-year recitation (147,123) fall inside sloppy tolerances - which is why tol is tight (0.2%)."
+      },
+      "revenue_yoy_growth": {
+        "primary": 0.35, "unit": "percent", "tol_abs": 0.15, "prior": -1.94,
+        "method": "(147,642 - 147,123) / 147,123 = 0.3528%.",
+        "traps": "Sign probe: prior year growth was NEGATIVE (-1.94%); a stale or column-shifted answer flips the sign of the story."
+      },
+      "gross_margin": {
+        "primary": 23.3, "unit": "percent", "tol_abs": 0.2, "prior": 22.7,
+        "method": "(Sales 147,642 - merchandise costs 113,240) / 147,642 = 23.301%. CAVEAT worth disclosing: Kroger's 'merchandise costs' INCLUDE advertising/warehousing/transport and EXCLUDE D&A and rent (shown separately) - not comparable to other retailers without adjustment; inventory is LIFO (LIFO charge 157 runs through merchandise costs).",
+        "traps": "Method-awareness probe: 23.30% is 'right' but non-comparable; the label on the line item says so explicitly."
+      },
+      "current_ratio": {
+        "primary": 0.801, "unit": "ratio", "tol_abs": 0.02, "prior": 0.958,
+        "method": "14,505 / 18,108 = 0.8010.",
+        "traps": "Deteriorated sharply YoY (0.96 to 0.80) mostly because current debt maturities jumped 272 to 1,802 - reclassification, not new borrowing. Judge bonus for noticing."
+      },
+      "net_debt": {
+        "primary": 14232, "unit": "USD_millions", "tol_rel": 0.005, "tol_abs_min": 50, "prior": 13946,
+        "alts": [{"value": 21358, "requires": "explicitly adds operating lease liabilities (665 + 6,461) as a lease-adjusted view and says so"}],
+        "method": "Current portion of LTD incl. finance leases 1,802 + long-term debt incl. finance leases 15,764 = 17,566, minus cash and temporary cash investments 3,334 = 14,232. Face combines finance leases with debt.",
+        "traps": "Levered company - the one roster name where net debt is a covenant-relevant number, not an academic one."
+      },
+      "ebitda": {
+        "primary": 5171, "unit": "USD_millions", "tol_rel": 0.005,
+        "alts": [{"value": 5222, "requires": "states it used operating profit 1,890 + D&A 3,332 (operating basis)"}],
+        "method": "NI incl. noncontrolling interests 1,024 + net interest 639 + taxes 176 + D&A 3,332 = 5,171. THE marquee materiality probe: FY2025 operating profit HALVED (3,849 to 1,890) because of a one-time 2,497 fulfillment-network impairment (visible as a cash-flow add-back and absent in prior years). Textbook EBITDA does NOT add back impairments - but any answer that fails to flag that ~half the EBITDA decline is one non-recurring charge is analytically blind. Adjusted EBITDA (+2,497 = 7,668) acceptable ONLY if labeled adjusted.",
+        "traps": "(1) Adding back the impairment silently (7,668 presented as EBITDA) = wrong. (2) Not mentioning it at all = materiality blindness. (3) Using NI attributable (1,016) vs incl. NCI (1,024) - minor, within tolerance. (4) Rent (872) is a separate line; adding it back = EBITDAR, not EBITDA."
+      }
+    }
+  }
+}

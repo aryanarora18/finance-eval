@@ -1,0 +1,59 @@
+KROGER CO (KR) | 10-K | Period: 2026-01-31 | Filed: 2026-03-31
+Source: https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/R7.htm
+
+| CONSOLIDATED STATEMENTS OF CASH FLOWS - USD ($)$ in Millions                                                           | 12 Months Ended
+   Jan. 31, 2026 | Feb. 01, 2025 | Feb. 03, 2024 |
+|:-----------------------------------------------------------------------------------------------------------------------|----------------:|--------------:|--------------:|
+| Cash Flows from Operating Activities:                                                                                  |                 |               |               |
+| Net earnings including noncontrolling interests                                                                        |         $ 1,024 |       $ 2,672 |       $ 2,169 |
+| Adjustments to reconcile net earnings including noncontrolling interests to net cash provided by operating activities: |                 |               |               |
+| Depreciation and amortization                                                                                          |           3,332 |         3,246 |         3,125 |
+| Fulfillment network impairment and related charges                                                                     |           2,497 |               |               |
+| Asset impairment and store closure charges                                                                             |             187 |            98 |            69 |
+| Operating lease asset amortization                                                                                     |             588 |           603 |           625 |
+| LIFO charge                                                                                                            |             157 |            95 |           113 |
+| Share-based employee compensation                                                                                      |             157 |           175 |           172 |
+| Deferred income taxes                                                                                                  |            -330 |          -102 |          -155 |
+| Gain on sale of business                                                                                                |                 |           -79 |               |
+| Gain on sale of assets                                                                                                 |             -13 |           -70 |           -56 |
+| Loss on investments                                                                                                    |              41 |           148 |          -151 |
+| Other                                                                                                                  |               1 |            20 |            69 |
+| Changes in operating assets and liabilities:                                                                           |                 |               |               |
+| Store deposits in-transit                                                                                              |              68 |           -97 |           -88 |
+| Receivables                                                                                                            |             113 |          -288 |            14 |
+| Inventories                                                                                                            |             -86 |          -144 |           342 |
+| Prepaid and other current assets                                                                                       |               8 |          -166 |            72 |
+| Accounts payable                                                                                                       |             388 |           253 |           545 |
+| Accrued expenses                                                                                                       |             165 |           107 |          -222 |
+| Income taxes receivable and payable                                                                                    |            -115 |            76 |            68 |
+| Operating lease liabilities                                                                                            |            -529 |          -609 |          -695 |
+| Other                                                                                                                  |            -342 |          -144 |           772 |
+| Net cash provided by operating activities                                                                              |           7,311 |         5,794 |         6,788 |
+| Cash Flows from Investing Activities:                                                                                  |                 |               |               |
+| Payments for property and equipment, including payments for lease buyouts                                              |          -3,855 |        -4,017 |        -3,904 |
+| Proceeds from sale of assets                                                                                           |              76 |           377 |           101 |
+| Net proceeds from sale of business                                                                                     |              52 |           464 |               |
+| Other                                                                                                                  |            -187 |           -52 |            53 |
+| Net cash used by investing activities                                                                                  |          -3,914 |        -3,228 |        -3,750 |
+| Cash Flows from Financing Activities:                                                                                  |                 |               |               |
+| Proceeds from issuance of long-term debt                                                                               |              43 |        10,502 |            15 |
+| Payments on long-term debt including obligations under finance leases                                                  |            -540 |        -4,883 |        -1,301 |
+| Dividends paid                                                                                                         |            -885 |          -883 |          -796 |
+| Financing fees paid                                                                                                    |                 |          -116 |               |
+| Proceeds from issuance of capital stock                                                                                |             182 |           127 |            50 |
+| Treasury stock purchases                                                                                               |          -2,699 |        -4,156 |           -62 |
+| Unsettled accelerated share repurchases                                                                                |                 |        -1,000 |               |
+| Other                                                                                                                  |            -123 |           -81 |           -76 |
+| Net cash used by financing activities                                                                                  |          -4,022 |          -490 |        -2,170 |
+| Net (decrease) increase in cash and temporary cash investments                                                         |            -625 |         2,076 |           868 |
+| Cash and temporary cash investments:                                                                                   |                 |               |               |
+| Beginning of year                                                                                                      |           3,959 |         1,883 |         1,015 |
+| End of year                                                                                                            |           3,334 |         3,959 |         1,883 |
+| Reconciliation of capital investments:                                                                                 |                 |               |               |
+| Payments for property and equipment, including payments for lease buyouts                                              |          -3,855 |        -4,017 |        -3,904 |
+| Payments for lease buyouts                                                                                             |              33 |            51 |               |
+| Changes in construction-in-progress payables                                                                           |             -40 |           343 |           344 |
+| Total capital investments, excluding lease buyouts                                                                     |          -3,862 |        -3,623 |        -3,560 |
+| Disclosure of cash flow information:                                                                                   |                 |               |               |
+| Cash paid during the year for net interest                                                                             |             633 |           252 |           488 |
+| Cash paid during the year for income taxes                                                                             |           $ 635 |         $ 681 |         $ 751 |

@@ -1,0 +1,45 @@
+DELTA AIR LINES, INC. (DAL) | 10-K | Period: 2025-12-31 | Filed: 2026-02-11
+Source: https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/R5.htm
+
+| Consolidated Statements of Operations - USD ($)$ in Millions | 12 Months Ended
+   Dec. 31, 2025 | Dec. 31, 2024 | Dec. 31, 2023 |
+|:-------------------------------------------------------------|----------------:|--------------:|--------------:|
+| Operating Revenue:                                           |                 |               |               |
+| Total operating revenue                                      |        $ 63,364 |      $ 61,643 |      $ 58,048 |
+| Operating Expense:                                           |                 |               |               |
+| Salaries and related costs                                   |          17,520 |        16,161 |        14,607 |
+| Aircraft fuel and related taxes                              |           9,819 |        10,566 |        11,069 |
+| Ancillary businesses and refinery                            |           5,987 |         5,416 |         4,172 |
+| Contracted services                                          |           4,617 |         4,228 |         4,041 |
+| Landing fees and other rents                                 |           3,564 |         3,150 |         2,563 |
+| Regional carrier expense                                     |           2,553 |         2,328 |         2,200 |
+| Passenger commissions and other selling expenses             |           2,485 |         2,485 |         2,334 |
+| Depreciation and amortization                                |           2,443 |         2,513 |         2,341 |
+| Aircraft maintenance materials and outside repairs           |           2,432 |         2,616 |         2,432 |
+| Passenger service                                            |           1,855 |         1,788 |         1,750 |
+| Profit sharing                                               |           1,337 |         1,389 |         1,383 |
+| Aircraft rent                                                |             542 |           548 |           532 |
+| Pilot agreement and related expenses                         |               0 |             0 |           864 |
+| Other                                                        |           2,388 |         2,460 |         2,239 |
+| Total operating expense                                      |          57,542 |        55,648 |        52,527 |
+| Operating Income                                             |           5,822 |         5,995 |         5,521 |
+| Non-Operating Income/(Expense):                              |                 |               |               |
+| Interest expense, net                                        |            -679 |          -747 |          -834 |
+| Gain/(loss) on investments, net                              |           1,212 |          -319 |         1,263 |
+| Loss on extinguishment of debt                               |             -26 |           -39 |           -63 |
+| Miscellaneous, net                                           |            -144 |          -232 |          -279 |
+| Total non-operating income/(expense), net                    |             363 |        -1,337 |            87 |
+| Income Before Income Taxes                                   |           6,185 |         4,658 |         5,608 |
+| Income Tax Provision                                         |          -1,180 |        -1,201 |          -999 |
+| Net Income                                                   |         $ 5,005 |       $ 3,457 |       $ 4,609 |
+| Basic Earnings Per Share (USD per share)                     |          $ 7.72 |        $ 5.39 |        $ 7.21 |
+| Diluted Earnings Per Share (USD per share)                   |          $ 7.66 |        $ 5.33 |        $ 7.17 |
+| Passenger                                                    |                 |               |               |
+| Operating Revenue:                                           |                 |               |               |
+| Total operating revenue                                      |        $ 51,768 |      $ 50,894 |      $ 48,909 |
+| Cargo                                                        |                 |               |               |
+| Operating Revenue:                                           |                 |               |               |
+| Total operating revenue                                      |             900 |           822 |           723 |
+| Other                                                        |                 |               |               |
+| Operating Revenue:                                           |                 |               |               |
+| Total operating revenue                                      |        $ 10,696 |       $ 9,927 |       $ 8,416 |

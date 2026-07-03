@@ -1,0 +1,49 @@
+DELTA AIR LINES, INC. (DAL) | 10-K | Period: 2025-12-31 | Filed: 2026-02-11
+Source: https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/R7.htm
+
+| Consolidated Statements of Cash Flows - USD ($)$ in Millions                      | 12 Months Ended
+   Dec. 31, 2025 | Dec. 31, 2024 | Dec. 31, 2023 |
+|:----------------------------------------------------------------------------------|----------------:|--------------:|--------------:|
+| Cash Flows From Operating Activities:                                             |                 |               |               |
+| Net income                                                                        |         $ 5,005 |       $ 3,457 |       $ 4,609 |
+| Adjustments to reconcile net income to net cash provided by operating activities: |                 |               |               |
+| Depreciation and amortization                                                     |           2,443 |         2,513 |         2,341 |
+| Deferred income taxes                                                             |           1,109 |         1,155 |           980 |
+| (Gain)/loss on fair value investments                                             |          -1,209 |           323 |        -1,283 |
+| Pension, postretirement and postemployment payments greater than expense          |            -210 |          -296 |          -121 |
+| Changes in certain assets and liabilities:                                        |                 |               |               |
+| Receivables                                                                       |             432 |          -126 |            -7 |
+| Prepaids and other current assets                                                 |            -183 |          -241 |           137 |
+| Profit sharing                                                                    |             -53 |             6 |           821 |
+| Other payables, deferred revenue and accrued liabilities                          |             842 |           614 |          -285 |
+| Other, net                                                                        |            -332 |           163 |           -50 |
+| Net cash provided by operating activities                                         |           8,342 |         8,025 |         6,464 |
+| Property and equipment additions:                                                 |                 |               |               |
+| Flight equipment, including advance payments                                      |          -3,521 |        -3,914 |        -3,645 |
+| Ground property and equipment, including technology                               |            -978 |        -1,226 |        -1,678 |
+| Purchase of equity investments                                                    |            -276 |             0 |          -152 |
+| Purchase of short-term investments                                                |               0 |             0 |        -2,312 |
+| Redemption of short-term investments                                              |               0 |         1,137 |         4,547 |
+| Other, net                                                                        |             589 |           264 |            92 |
+| Net cash used in investing activities                                             |          -4,186 |        -3,739 |        -3,148 |
+| Cash Flows From Financing Activities:                                             |                 |               |               |
+| Proceeds from long-term obligations                                               |           2,215 |             0 |           878 |
+| Payments on debt and finance lease obligations                                    |          -4,827 |        -3,953 |        -4,071 |
+| Cash dividends                                                                    |            -440 |          -321 |          -128 |
+| Other, net                                                                        |             -24 |            14 |           -73 |
+| Net cash used in financing activities                                             |          -3,076 |        -4,260 |        -3,394 |
+| Net Increase/(Decrease) in Cash, Cash Equivalents and Restricted Cash             |           1,080 |            26 |           -78 |
+| Cash, cash equivalents and restricted cash at beginning of period                 |           3,421 |         3,395 |         3,473 |
+| Cash, cash equivalents and restricted cash at end of period                       |           4,501 |         3,421 |         3,395 |
+| Supplemental Disclosure of Cash Paid for Interest                                 |             850 |         1,001 |         1,164 |
+| Non-Cash Transactions:                                                            |                 |               |               |
+| Right-of-use assets acquired or modified under operating leases                   |             375 |           327 |           661 |
+| Flight and ground equipment acquired or modified under finance leases             |             184 |           -17 |            31 |
+| Operating leases converted to finance leases                                      |             312 |            25 |            84 |
+| Debt agreements modified                                                          |             371 |             0 |             0 |
+| Air traffic liability                                                             |                 |               |               |
+| Changes in certain assets and liabilities:                                        |                 |               |               |
+| Liabilities and deferred revenue                                                  |              63 |            50 |        -1,216 |
+| Loyalty program deferred revenue                                                  |                 |               |               |
+| Changes in certain assets and liabilities:                                        |                 |               |               |
+| Liabilities and deferred revenue                                                  |           $ 435 |         $ 407 |         $ 538 |

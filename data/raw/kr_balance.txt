@@ -1,0 +1,44 @@
+KROGER CO (KR) | 10-K | Period: 2026-01-31 | Filed: 2026-03-31
+Source: https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/R2.htm
+
+| CONSOLIDATED BALANCE SHEETS - USD ($)$ in Millions                                             | Jan. 31, 2026 | Feb. 01, 2025 |
+|:-----------------------------------------------------------------------------------------------|--------------:|--------------:|
+| Current assets                                                                                 |               |               |
+| Cash and temporary cash investments                                                            |       $ 3,334 |       $ 3,959 |
+| Store deposits in-transit                                                                      |         1,244 |         1,312 |
+| Receivables                                                                                    |         2,192 |         2,195 |
+| FIFO inventory                                                                                 |         9,445 |         9,442 |
+| LIFO reserve                                                                                   |        -2,553 |        -2,404 |
+| Prepaid and other current assets                                                               |           843 |           769 |
+| Total current assets                                                                           |        14,505 |        15,273 |
+| Property, plant and equipment, net                                                             |        24,260 |        25,703 |
+| Operating lease assets                                                                         |         6,682 |         6,839 |
+| Intangibles, net                                                                               |           808 |           834 |
+| Goodwill                                                                                       |         2,595 |         2,674 |
+| Other assets                                                                                   |         1,103 |         1,293 |
+| Total Assets                                                                                   |        49,953 |        52,616 |
+| Current liabilities                                                                            |               |               |
+| Current portion of long-term debt including obligations under finance leases                   |         1,802 |           272 |
+| Current portion of operating lease liabilities                                                 |           665 |           599 |
+| Accounts payable                                                                               |        10,488 |        10,124 |
+| Accrued salaries and wages                                                                     |         1,267 |         1,330 |
+| Other current liabilities                                                                      |         3,886 |         3,615 |
+| Total current liabilities                                                                      |        18,108 |        15,940 |
+| Long-term debt including obligations under finance leases                                      |        15,764 |        17,633 |
+| Noncurrent operating lease liabilities                                                         |         6,461 |         6,578 |
+| Deferred income taxes                                                                          |         1,094 |         1,417 |
+| Pension and postretirement benefit obligations                                                 |           421 |           387 |
+| Other long-term liabilities                                                                    |         2,169 |         2,380 |
+| Total Liabilities                                                                              |        44,017 |        44,335 |
+| Commitments and contingencies (see Note 12)                                                    |               |               |
+| SHAREOWNERS' EQUITY                                                                            |               |               |
+| Preferred shares, $100 par per share, 5 shares authorized and unissued                         |               |               |
+| Common shares, $1 par per share, 2,000 shares authorized; 1,918 shares issued in 2025 and 2024 |         1,918 |         1,918 |
+| Additional paid-in capital                                                                     |         3,907 |         3,087 |
+| Accumulated other comprehensive loss                                                           |          -635 |          -621 |
+| Accumulated earnings                                                                           |        28,850 |        28,724 |
+| Common shares in treasury, at cost, 1,303 shares in 2025 and 1,258 shares in 2024              |       -28,113 |       -24,823 |
+| Total Shareowners' Equity - The Kroger Co.                                                     |         5,927 |         8,285 |
+| Noncontrolling interests                                                                       |             9 |            -4 |
+| Total Equity                                                                                   |         5,936 |         8,281 |
+| Total Liabilities and Equity                                                                   |      $ 49,953 |      $ 52,616 |

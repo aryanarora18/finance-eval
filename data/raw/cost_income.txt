@@ -1,0 +1,30 @@
+COSTCO WHOLESALE CORP /NEW (COST) | 10-K | Period: 2025-08-31 | Filed: 2025-10-08
+Source: https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/R3.htm
+
+| Consolidated Statements Of Income - USD ($)shares in Thousands, $ in Millions | 12 Months Ended
+   Aug. 31, 2025 | Sep. 01, 2024 | Sep. 03, 2023 |
+|:------------------------------------------------------------------------------|----------------:|--------------:|--------------:|
+| REVENUE                                                                       |                 |               |               |
+| Total revenue                                                                 |       $ 275,235 |     $ 254,453 |     $ 242,290 |
+| OPERATING EXPENSES                                                            |                 |               |               |
+| Merchandise costs                                                             |         239,886 |       222,358 |       212,586 |
+| Selling, general and administrative                                           |          24,966 |        22,810 |        21,590 |
+| Operating income                                                              |          10,383 |         9,285 |         8,114 |
+| OTHER INCOME (EXPENSE)                                                        |                 |               |               |
+| Interest expense                                                              |            -154 |          -169 |          -160 |
+| Interest income and other, net                                                |             589 |           624 |           533 |
+| INCOME BEFORE INCOME TAXES                                                    |          10,818 |         9,740 |         8,487 |
+| Provision for income taxes                                                    |           2,719 |         2,373 |         2,195 |
+| NET INCOME                                                                    |         $ 8,099 |       $ 7,367 |       $ 6,292 |
+| NET INCOME PER COMMON SHARE:                                                  |                 |               |               |
+| Basic                                                                         |         $ 18.24 |       $ 16.59 |       $ 14.18 |
+| Diluted                                                                       |         $ 18.21 |       $ 16.56 |       $ 14.16 |
+| Shares used in calculation (000's)                                            |                 |               |               |
+| Basic                                                                         |         443,985 |       443,914 |       443,854 |
+| Diluted                                                                       |         444,803 |       444,759 |       444,452 |
+| Net sales                                                                     |                 |               |               |
+| REVENUE                                                                       |                 |               |               |
+| Total revenue                                                                 |       $ 269,912 |     $ 249,625 |     $ 237,710 |
+| Membership fees                                                               |                 |               |               |
+| REVENUE                                                                       |                 |               |               |
+| Total revenue                                                                 |         $ 5,323 |       $ 4,828 |       $ 4,580 |

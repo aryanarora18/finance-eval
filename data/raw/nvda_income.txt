@@ -1,0 +1,28 @@
+NVIDIA CORP (NVDA) | 10-K | Period: 2026-01-25 | Filed: 2026-02-25
+Source: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/R3.htm
+
+| Consolidated Statements of Income - USD ($)shares in Millions, $ in Millions | 12 Months Ended
+   Jan. 25, 2026 | Jan. 26, 2025 | Jan. 28, 2024 |
+|:-----------------------------------------------------------------------------|----------------:|--------------:|--------------:|
+| Income Statement [Abstract]                                                  |                 |               |               |
+| Revenue                                                                      |       $ 215,938 |     $ 130,497 |      $ 60,922 |
+| Cost of revenue                                                              |          62,475 |        32,639 |        16,621 |
+| Gross profit                                                                 |         153,463 |        97,858 |        44,301 |
+| Operating expenses                                                           |                 |               |               |
+| Research and development                                                     |          18,497 |        12,914 |         8,675 |
+| Sales, general and administrative                                            |           4,579 |         3,491 |         2,654 |
+| Total operating expenses                                                     |          23,076 |        16,405 |        11,329 |
+| Operating income                                                             |         130,387 |        81,453 |        32,972 |
+| Interest income                                                              |           2,300 |         1,786 |           866 |
+| Interest expense                                                             |            -259 |          -247 |          -257 |
+| Other income, net                                                            |           9,022 |         1,034 |           237 |
+| Total other income, net                                                      |          11,063 |         2,573 |           846 |
+| Income before income tax                                                     |         141,450 |        84,026 |        33,818 |
+| Income tax expense                                                           |          21,383 |        11,146 |         4,058 |
+| Net income                                                                   |       $ 120,067 |      $ 72,880 |      $ 29,760 |
+| Net income per share:                                                        |                 |               |               |
+| Basic (in USD per share)                                                     |          $ 4.93 |        $ 2.97 |        $ 1.21 |
+| Diluted (in USD per share)                                                   |          $ 4.90 |        $ 2.94 |        $ 1.19 |
+| Weighted average shares used in per share computation:                       |                 |               |               |
+| Basic (in shares)                                                            |          24,359 |        24,555 |        24,690 |
+| Diluted (in shares)                                                          |          24,514 |        24,804 |        24,940 |
