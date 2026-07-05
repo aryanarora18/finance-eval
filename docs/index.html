@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>finance-eval — the failure a 97% accuracy score hides</title>
+<style>
+  :root {
+    --ink: #16233b; --ink-soft: #4a5872; --paper: #f7f8fa; --card: #ffffff;
+    --line: #dde2ea; --pass: #1a7f4e; --pass-bg: #e8f5ee; --fail: #b3261e; --fail-bg: #fbecea;
+    --accent: #1b4fd8; --mono: "SF Mono", "Cascadia Code", Consolas, Menlo, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { font: 16px/1.55 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--paper); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 40px 20px 64px; }
+  header h1 { font-size: 1.9rem; letter-spacing: -0.02em; }
+  header .sub { color: var(--ink-soft); margin-top: 8px; max-width: 760px; }
+  header .links { margin-top: 12px; font-size: 0.92rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h2 { font-size: 1.25rem; margin: 44px 0 6px; letter-spacing: -0.01em; }
+  .lede { color: var(--ink-soft); margin-bottom: 16px; max-width: 800px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; }
+  .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  /* statement excerpt */
+  .stmt { font-family: var(--mono); font-size: 0.84rem; }
+  .stmt table { border-collapse: collapse; width: 100%; }
+  .stmt td { padding: 3px 8px; border-bottom: 1px solid var(--line); }
+  .stmt td:last-child { text-align: right; }
+  .stmt .cap { color: var(--ink-soft); font-family: inherit; }
+  /* model cards */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 16px; }
+  .model h3 { font-size: 1rem; margin-bottom: 2px; }
+  .model .mid { color: var(--ink-soft); font-size: 0.8rem; font-family: var(--mono); margin-bottom: 10px; }
+  .runs { display: flex; flex-direction: column; gap: 8px; }
+  .run { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 0.9rem; }
+  .run .v { font-family: var(--mono); font-weight: 600; }
+  .run .meta { color: var(--ink-soft); font-size: 0.8rem; }
+  .verdict { display: inline-block; font-size: 0.72rem; font-weight: 600; padding: 1px 8px; border-radius: 10px; margin-left: 6px; vertical-align: 1px; }
+  .verdict.pass { color: var(--pass); background: var(--pass-bg); }
+  .verdict.fail { color: var(--fail); background: var(--fail-bg); }
+  .contradiction { background: var(--fail-bg); border: 1px solid #ecc8c5; border-radius: 8px; padding: 12px 14px; margin-top: 14px; font-size: 0.92rem; }
+  .contradiction .num { font-weight: 600; }
+  .footnote { color: var(--ink-soft); font-size: 0.85rem; margin-top: 12px; }
+  /* two-verdict banner */
+  .twoverdicts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+  .tv { border-radius: 10px; padding: 14px 16px; }
+  .tv.generic { background: var(--pass-bg); border: 1px solid #c4e3d2; }
+  .tv.finance { background: var(--fail-bg); border: 1px solid #ecc8c5; }
+  .tv .label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .tv.generic .label { color: var(--pass); }
+  .tv.finance .label { color: var(--fail); }
+  .tv .big { font-size: 1.35rem; font-weight: 700; margin-top: 2px; }
+  .tv .why { font-size: 0.86rem; color: var(--ink-soft); margin-top: 4px; }
+  /* reshuffle table */
+  .shuffle { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin-top: 14px; }
+  .shuffle th, .shuffle td { padding: 9px 12px; border-bottom: 1px solid var(--line); text-align: left; }
+  .shuffle th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); }
+  .pill { display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 2px 10px; border-radius: 10px; }
+  .pill.pass { color: var(--pass); background: var(--pass-bg); }
+  .pill.fail { color: var(--fail); background: var(--fail-bg); }
+  .pill.mixed { color: #8a5a00; background: #fdf3e0; }
+  /* stats row */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin-top: 16px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .stat .big { font-size: 1.5rem; font-weight: 700; font-family: var(--mono); }
+  .stat .cap { font-size: 0.82rem; color: var(--ink-soft); margin-top: 2px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 0.88rem; }
+  @media (max-width: 640px) { .twoverdicts { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>The failure a 97% accuracy score hides</h1>
+  <p class="sub">I asked three frontier Claude models to compute six metrics from real 10-K statements (SEC EDGAR, verbatim) — 3 runs each, graded twice: once on the <em>number</em> (deterministic), once the way a finance professional would (method, disclosure, materiality). Same aggregate score every time. Very different trustworthiness.</p>
+  <p class="links"><a href="https://github.com/aryanarora18/finance-eval">Repo</a> · <a href="https://github.com/aryanarora18/finance-eval/blob/main/findings/FINDINGS.md">Full findings</a> · <a href="https://github.com/aryanarora18/finance-eval/blob/main/DECISIONS.md">Decision log</a></p>
+</header>
+
+<h2>Exhibit A — Apple's net debt, 9 attempts, 1 trustworthy answer</h2>
+<p class="lede">Everything the models needed, from Apple's FY2025 balance sheet (USD millions). "Net debt" hinges on one method choice: are <em>non-current</em> marketable securities cash-like? Include them and Apple has <span class="num">−$33.8B</span> net <em>cash</em>; exclude them and it has <span class="num">+$44.0B</span> net <em>debt</em>. Both defensible — <strong>if you say which you chose</strong>. A $78B swing rides on that sentence.</p>
+
+<div class="card stmt">
+  <table>
+    <tr><td class="cap">Cash and cash equivalents</td><td>$ 35,934</td></tr>
+    <tr><td class="cap">Marketable securities (current)</td><td>18,763</td></tr>
+    <tr><td class="cap">Marketable securities (non-current)</td><td>77,723</td></tr>
+    <tr><td class="cap">Commercial paper</td><td>7,979</td></tr>
+    <tr><td class="cap">Term debt (current)</td><td>12,350</td></tr>
+    <tr><td class="cap">Term debt (non-current)</td><td>78,328</td></tr>
+  </table>
+</div>
+
+<div class="grid">
+  <div class="card model">
+    <h3>Opus</h3>
+    <div class="mid">claude-opus-4-8 · consistently wrong</div>
+    <div class="runs">
+      <div class="run"><span class="v num">44,237</span><span class="verdict fail">judge: fail</span><div class="meta">confidence 0.50</div></div>
+      <div class="run"><span class="v num">44,237</span><span class="verdict fail">judge: fail</span><div class="meta">confidence 0.85</div></div>
+      <div class="run"><span class="v num">44,237</span><span class="verdict fail">judge: fail</span><div class="meta">confidence 0.90</div></div>
+    </div>
+    <div class="contradiction">Its own stated method: <span class="num">(7,979 + 12,350 + 78,328) − (35,934 + 18,763 + 77,723)</span> = <span class="num">−33,763</span>. The prose says <em>net cash</em>; the reported number says <em>net debt</em> — and confidence <strong>rose</strong> across three identical, self-contradictory answers.</div>
+  </div>
+  <div class="card model">
+    <h3>Sonnet 4.6</h3>
+    <div class="mid">claude-sonnet-4-6 · high variance</div>
+    <div class="runs">
+      <div class="run"><span class="v num">46,358</span><span class="verdict fail">judge: fail</span><div class="meta">confidence 0.75</div></div>
+      <div class="run"><span class="v num">62,960</span><span class="verdict fail">judge: fail</span><div class="meta">confidence 0.75</div></div>
+      <div class="run"><span class="v num">−33,843</span><span class="verdict fail">judge: fail</span><div class="meta">confidence 0.80</div></div>
+    </div>
+    <div class="contradiction">One company, one balance sheet, three runs — <strong>three different answers spanning $96B</strong>, none with the method choice disclosed cleanly enough to pass.</div>
+  </div>
+  <div class="card model">
+    <h3>Sonnet 5</h3>
+    <div class="mid">claude-sonnet-5 · newest — still 1/3</div>
+    <div class="runs">
+      <div class="run"><span class="v num">−33,763</span><span class="verdict fail">judge: fail</span><div class="meta">confidence 0.85 · disclosed alt, caveat missing</div></div>
+      <div class="run"><span class="v num">62,723</span><span class="verdict fail">judge: fail</span><div class="meta">confidence 0.75 · debt − cash only</div></div>
+      <div class="run"><span class="v num">43,960</span><span class="verdict pass">judge: pass</span><div class="meta">confidence 0.75 · the one trustworthy answer</div></div>
+    </div>
+    <div class="contradiction">The newest model doesn't fix it — same variance signature, one pass in three tries.</div>
+  </div>
+</div>
+
+<div class="twoverdicts">
+  <div class="tv generic">
+    <div class="label">A generic accuracy eval says</div>
+    <div class="big">✓ strong metric</div>
+    <div class="why">Opus lands within 0.7% of a golden value, three times in a row — a lenient digit-checker scores this cell among the best.</div>
+  </div>
+  <div class="tv finance">
+    <div class="label">The finance-aware eval says</div>
+    <div class="big">1 / 9 trustworthy</div>
+    <div class="why">Wrong method silently chosen, answers contradicting their own stated arithmetic, $78B method swing never disclosed.</div>
+  </div>
+</div>
+
+<h2>Exhibit B — three model generations, one constant score, moving risk</h2>
+<p class="lede">Aggregate accuracy never moved: <strong>97% Tier-1 / 93% finance-aware, all three models.</strong> But the specific $50B-class failures relocated with each generation. If you validated on one model and upgraded, your eval score would say nothing changed — while a new silent error appeared.</p>
+
+<div class="card" style="padding: 6px 20px 14px;">
+<table class="shuffle">
+  <tr><th>Probe</th><th>Sonnet 4.6</th><th>Opus</th><th>Sonnet 5</th></tr>
+  <tr>
+    <td>AAPL net debt <span class="num">($78B method swing)</span></td>
+    <td><span class="pill fail">fail 3/3</span></td>
+    <td><span class="pill fail">fail 3/3</span></td>
+    <td><span class="pill mixed">fail 2/3</span></td>
+  </tr>
+  <tr>
+    <td>NVDA net debt <span class="num">($52B securities omitted)</span></td>
+    <td><span class="pill pass">pass</span></td>
+    <td><span class="pill pass">pass</span></td>
+    <td><span class="pill fail">REGRESSED — fail 2/3</span></td>
+  </tr>
+  <tr>
+    <td>COST gross margin <span class="num">(172bp method ambiguity)</span></td>
+    <td><span class="pill fail">fail — method silent</span></td>
+    <td><span class="pill mixed">fail 1/3</span></td>
+    <td><span class="pill pass">FIXED — discloses method</span></td>
+  </tr>
+</table>
+</div>
+<p class="footnote">Sonnet 5's NVDA regression: it adopted a "net debt = debt − cash only" convention, silently omitting $52.0B of marketable securities — at 0.9 confidence. Neither older model made that mistake. Costco went the other way: same 12.84% number that failed before, now passing because the model explains its method choice. <strong>Evals are per-model artifacts: constant accuracy, relocated risk.</strong></p>
+
+<h2>What didn't fail (also a finding)</h2>
+<div class="stats">
+  <div class="stat"><div class="big">0 / 9</div><div class="cap">fabrications when a metric wasn't computable — every model refused Delta's gross margin (airlines report none) every time</div></div>
+  <div class="stat"><div class="big">0 / 264</div><div class="cap">memorization hits — on filings newer than training data, models read the document, never recited stale numbers</div></div>
+  <div class="stat"><div class="big">9 / 9</div><div class="cap">flagged Kroger's one-time $2.5B impairment in EBITDA — the materiality probe didn't catch anyone</div></div>
+  <div class="stat"><div class="big">10</div><div class="cap">right-number-wrong-judgment answers: value inside tolerance, method or disclosure an analyst would reject</div></div>
+</div>
+<p class="footnote">The feared failures — hallucinated numbers, recited training data — didn't show up. The real failure mode is <strong>silent method choice</strong>, and it's invisible to any eval that only checks the digits.</p>
+
+<footer>
+  Built by <a href="https://www.linkedin.com/in/aryanarora0/">Aryan Arora</a> — technical PM, ex-Microsoft, UCLA CS + Booth MBA. Golden set hand-authored from the face of each filing; every value machine-verified against the raw EDGAR line items. Grading models: see <a href="https://github.com/aryanarora18/finance-eval/blob/main/README.md">README</a> for the self-judging confound and other logged caveats.
+</footer>
+
+</div>
+</body>
+</html>
